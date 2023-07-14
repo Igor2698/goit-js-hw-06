@@ -41,4 +41,4 @@ sixItem.classList.add('item')
 console.log(sixItem.textContent)
 
 
-list.append(firtItem, secondItem, thirdItem, fourItem, fiveItem, sixItem )
+list.append(firtItem, secondItem, thirdItem, fourItem, fiveItem, sixItem)
