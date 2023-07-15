@@ -7,10 +7,12 @@ function loseFocus() {
         input.classList.add('valid')
         input.classList.remove('invalid')
     }
-    else if(input.value.length === 0) {
+    else if (input.value.length === 0) {
         input.classList.remove('invalid')
         input.classList.remove('valid')
     }
 
-    else input.classList.add('invalid') 
+    else {
+        input.classList.add('invalid')
+    }
 }

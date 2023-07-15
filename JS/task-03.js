@@ -15,15 +15,17 @@ const images = [
 
 const list = document.querySelector('.gallery')
 list.style.setProperty("display", "flex")
+list.style.setProperty("gap", "10px")
+list.style.setProperty("list-style", "none")
+
+const markup = images.map(image => {
+  return `<li><img  src="${image.url}" alt ="${image.alt}"></li>`
+}).join('');
+
+list.insertAdjacentHTML("afterbegin", markup)
 
 
 
-function createGalery(array) {
-   array.forEach(image => {
-  return  list.insertAdjacentHTML("afterbegin", `<li><img  src = ${image.url} alt = ${image.alt} width = 400 height = 300  ></li>` )});
-}
-
-createGalery(images)
 
 
 

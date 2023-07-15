@@ -11,13 +11,16 @@ const createButton = document.querySelector('button[data-create]');
 const baseDiv = document.querySelector('#boxes');
 
 
-let widthDiv = 20;
-let hightDiv = 20;
-const step = 10;
-let newDiv;
+
 function createBoxes(amount) {
   input.value = 0;
 
+  let widthDiv = 20;
+  let hightDiv = 20;
+  const step = 10;
+
+  let newDiv;
+  
   for (let i = 1; i <= amount; i += 1) {
     newDiv = document.createElement("div");
     newDiv.style.width = (widthDiv += 10) + "px"
@@ -25,32 +28,19 @@ function createBoxes(amount) {
     newDiv.style.background = getRandomHexColor()
 
     baseDiv.append(newDiv)
-
   }
-
 }
-
-
-
 
 createButton.addEventListener("click", function () {
   createBoxes(input.value);
 });
 
-
 destroyButton.addEventListener("click", function () {
-
-
   baseDiv.innerHTML = '';
   input.value = 0;
-
   if (newDiv) {
     newDiv.style.height = "30px";
   }
-
-
-
-
 });
 
 

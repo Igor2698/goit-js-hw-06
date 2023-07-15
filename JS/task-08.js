@@ -6,17 +6,12 @@ const inputPassword = document.querySelector('input[type="password"]');
 
 form.addEventListener('submit', onFormSubmit);
 
-
-
-
-
-
-
 function onFormSubmit(event) {
     event.preventDefault()
 
     if (inputPassword.value === '' || inputEmail.value === '') {
         alert('All fields must be full')
+        return;
     }
 
     console.log({
