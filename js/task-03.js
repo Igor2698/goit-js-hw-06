@@ -19,8 +19,10 @@ list.style.setProperty("gap", "10px")
 list.style.setProperty("list-style", "none")
 
 const markup = images.map(image => {
-  return `<li><img  src="${image.url}" alt ="${image.alt}"></li>`
+  return `<li><img  src="${image.url}" alt ="${image.alt}" width="300" height="400"></li>`
 }).join('');
+
+
 
 list.insertAdjacentHTML("afterbegin", markup)
 
