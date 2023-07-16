@@ -17,7 +17,6 @@ function createBoxes(amount) {
 
   let widthDiv = 20;
   let hightDiv = 20;
-  const step = 10;
 
   let newDiv;
   
